@@ -94,5 +94,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\logo_goog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Seacrhc.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

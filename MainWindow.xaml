@@ -5,8 +5,142 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lexical_Analizer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Lexical Analizer" Height="750" Width="1000"
+        MinHeight="300"
+        MinWidth="600"
+        WindowStyle="None"
+        ResizeMode="NoResize">
+    <Grid MouseDown="Grid_MouseDown">
+        <Border Opacity="1"
+                Background="Transparent"
+                MouseLeftButtonDown="Border_MouseLeftButtonDown">
+            <Grid>
+                <TextBox HorizontalAlignment="Center"
+                 VerticalAlignment="Bottom"
+                 Opacity="0"
+                 x:Name="KASTIL"/>
+                <Image Width="14"
+               Height="14"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Top"
+               Margin="0,5,10,0"
+               Source="\Icons\cross.png"/>
+                <Button Width="14"
+               Height="14"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Top"
+              Margin="0,5,10,0"
+                Click="CloseWindow"
+                Opacity="0"
+                Panel.ZIndex="1"/>
+                <StackPanel Orientation="Vertical">
+                    <Grid HorizontalAlignment="Center"
+                            x:Name="Seacrher">
+                        <StackPanel Orientation="Vertical">
+                            <Border x:Name="CorrectionLayout"
+                            Height="250"/>
+                            <Image Source="\Icons\logo_goog.png"
+                           Width="260"
+                           HorizontalAlignment="Center"
+                           x:Name="CentralLogo"/>
+                            <Grid>
+                                <Border Height="40"
+                        Width="530"
+                        BorderBrush="Black"
+                        BorderThickness="0.6"
+                        CornerRadius="21"
+                        Opacity="0.17"
+                        Margin="0,25,0,25"/>
+                                <Image Width="15"
+                           Height="35"
+                           Source="\Icons\Seacrhc.png"
+                           Cursor="Hand"
+                           Opacity="0.3"
+                           HorizontalAlignment="Left"
+                           Margin="15,0,0,0"
+                           MouseLeftButtonDown="StartAnalize"
+                           ToolTip="Начать анализ">
+                                </Image>
+                                <TextBox FontSize="15"
+                                 Background="Transparent"
+                                 Height="25"
+                                 VerticalAlignment="Center"
+                                 Margin="40,3,40,0"
+                                 BorderThickness="0"
+                                 Width="450"
+                                 Opacity="0.85"
+                                 x:Name="SearchLine"
+                                 GotFocus="TextBox_GotFocus"
+                                 LostFocus="TextBox_LostFocus"/>
+
+                            </Grid>
+                            <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                x:Name="ButtonsUseless"
+                                Width="250">
+                                <Border Width="120"
+                                Height="33"
+                                Background="#f4f4f2"
+                                CornerRadius="5"
+                                        MouseDown="GoogleSearchPSEVDOLEFT"
+                                        Cursor="Hand">
+                                    <Grid>
+                                        <Button Width="120"
+                                        Height="30"
+                                        Opacity="0"/>
+                                        <Label Content="Поиск в Google"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="14"
+                                   Foreground="Black"
+                                   Opacity="0.8"
+                                   FontWeight="Normal"/>
+                                    </Grid>
+                                </Border>
+                                <Border Width="120"
+                                x:Name="RightButton"
+                                Height="33"
+                                Background="#f4f4f2"
+                                CornerRadius="5"
+                                Margin="10,0,0,0"
+                                        MouseDown="GoogleSearchPSEVDORIGHT"
+                                        Cursor="Hand">
+                                    <Grid>
+                                        <Button Width="120"
+                                        Height="30"
+                                        Opacity="0"/>
+                                        <Label Content="Мне повезет!"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       FontSize="14"
+                                       Foreground="Black"
+                                       Opacity="0.8"
+                                       FontWeight="Normal"/>
+                                    </Grid>
+                                </Border>
+                            </StackPanel>
+                            <Grid>
+                                <Border Height="15"
+                                    Width="520"
+                                    Background="Transparent"
+                                    BorderBrush="Black"
+                                    BorderThickness="0.6"
+                                    CornerRadius="21"
+                                    Opacity="0"
+                                    x:Name="WorkAreaZone"
+                                        VerticalAlignment="Top"/>
+                                <StackPanel Orientation="Vertical"
+                                        x:Name="WorkArea"
+                                            Height="400"
+                                            HorizontalAlignment="Center"
+                                            Margin="0,5,0,0">
+
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </Border>
     </Grid>
 </Window>

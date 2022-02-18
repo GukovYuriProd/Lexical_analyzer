@@ -1,0 +1,16 @@
+D:\CodeProds\Lexical Analizer\bin\Debug\Lexical Analizer.exe.config
+D:\CodeProds\Lexical Analizer\bin\Debug\Lexical Analizer.exe
+D:\CodeProds\Lexical Analizer\bin\Debug\Lexical Analizer.pdb
+D:\CodeProds\Lexical Analizer\obj\Debug\Lexical Analizer.csproj.AssemblyReference.cache
+D:\CodeProds\Lexical Analizer\obj\Debug\Lexical Analizer.csproj.SuggestedBindingRedirects.cache
+D:\CodeProds\Lexical Analizer\obj\Debug\MainWindow.g.cs
+D:\CodeProds\Lexical Analizer\obj\Debug\App.g.cs
+D:\CodeProds\Lexical Analizer\obj\Debug\Lexical Analizer_MarkupCompile.cache
+D:\CodeProds\Lexical Analizer\obj\Debug\Lexical Analizer_MarkupCompile.lref
+D:\CodeProds\Lexical Analizer\obj\Debug\MainWindow.baml
+D:\CodeProds\Lexical Analizer\obj\Debug\Lexical Analizer.g.resources
+D:\CodeProds\Lexical Analizer\obj\Debug\Lexical_Analizer.Properties.Resources.resources
+D:\CodeProds\Lexical Analizer\obj\Debug\Lexical Analizer.csproj.GenerateResource.cache
+D:\CodeProds\Lexical Analizer\obj\Debug\Lexical Analizer.csproj.CoreCompileInputs.cache
+D:\CodeProds\Lexical Analizer\obj\Debug\Lexical Analizer.exe
+D:\CodeProds\Lexical Analizer\obj\Debug\Lexical Analizer.pdb
