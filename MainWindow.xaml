@@ -13,8 +13,42 @@
     <Grid MouseDown="Grid_MouseDown">
         <Border Opacity="1"
                 Background="Transparent"
-                MouseLeftButtonDown="Border_MouseLeftButtonDown">
+                MouseLeftButtonDown="Border_MouseLeftButtonDown"
+                AllowDrop="True"
+                DragEnter="FileEnter"
+                DragLeave="FileLeave"
+                Drop="FileEnterPool_Drop">
             <Grid>
+                <Grid VerticalAlignment="Top"
+                      HorizontalAlignment="Right"
+                      Margin="5">
+                    <Image Source="\Icons\help.png" 
+                           Width="17"
+                           Height="17"
+                           HorizontalAlignment="Right"
+                           VerticalAlignment="Top"
+                           MouseLeftButtonDown="HelpButton_Toogle"
+                           Cursor="Hand"/>
+                    <Grid x:Name="HelpBorder"
+                          Width="0">
+                        <Border Width="260"
+                            Height="190"
+                            Margin="0,0,30,0"
+                            BorderBrush="Black"
+                            BorderThickness="0.6"
+                            CornerRadius="21"
+                            Opacity="0.3">
+                        </Border>
+                        <StackPanel Margin="0,0,30,0" Opacity="0.8">
+                            <Label FontSize="16" Content="Алфавит" HorizontalAlignment="Center"/>
+                            <Label FontSize="15" Margin="5,0,0,0" Content="Латинские буквы любого регистра"/>
+                            <Label FontSize="15" Margin="5,0,0,0" Content="Знак присваивания ':='"/>
+                            <Label FontSize="15" Margin="5,0,0,0" Content="Константы '1' и '0'"/>
+                            <Label FontSize="15" Margin="5,0,0,0" Content="Знаки и слова операций: "/>
+                            <Label FontSize="15" Margin="5,0,0,0" Content="  > xor, or, and, not"/>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
                 <TextBox HorizontalAlignment="Center"
                  VerticalAlignment="Bottom"
                  Opacity="0"
@@ -22,42 +56,55 @@
                 <Image Width="14"
                Height="14"
                HorizontalAlignment="Right"
-               VerticalAlignment="Top"
-               Margin="0,5,10,0"
+               VerticalAlignment="Bottom"
+               Margin="0,0,5,5"
                Source="\Icons\cross.png"/>
                 <Button Width="14"
                Height="14"
                HorizontalAlignment="Right"
-               VerticalAlignment="Top"
-              Margin="0,5,10,0"
+               VerticalAlignment="Bottom"
+              Margin="0,0,5,5"
                 Click="CloseWindow"
                 Opacity="0"
-                Panel.ZIndex="1"/>
+                Panel.ZIndex="1"
+                        Cursor="Hand"/>
                 <StackPanel Orientation="Vertical">
                     <Grid HorizontalAlignment="Center"
                             x:Name="Seacrher">
                         <StackPanel Orientation="Vertical">
                             <Border x:Name="CorrectionLayout"
-                            Height="250"/>
-                            <Image Source="\Icons\logo_goog.png"
-                           Width="260"
+                            Height="230"/>
+                            <Image Source="\Icons\suai-main.png"
+                           Width="310"
                            HorizontalAlignment="Center"
                            x:Name="CentralLogo"/>
-                            <Grid>
+                            <Grid >
                                 <Border Height="40"
                         Width="530"
                         BorderBrush="Black"
                         BorderThickness="0.6"
                         CornerRadius="21"
                         Opacity="0.17"
-                        Margin="0,25,0,25"/>
+                        Margin="0,5,0,25"
+                                        x:Name="FileEnterPool"
+                                        />
+                                <Image Width="17"
+                           Height="35"
+                           Source="\Icons\Trash.png"
+                           Cursor="Hand"
+                           Opacity="0.3"
+                           HorizontalAlignment="Right"
+                           Margin="0,-20,15,0"
+                           MouseLeftButtonDown="ClearSearch"
+                           ToolTip="Начать анализ">
+                                </Image>
                                 <Image Width="15"
                            Height="35"
                            Source="\Icons\Seacrhc.png"
                            Cursor="Hand"
                            Opacity="0.3"
                            HorizontalAlignment="Left"
-                           Margin="15,0,0,0"
+                           Margin="15,-20,0,0"
                            MouseLeftButtonDown="StartAnalize"
                            ToolTip="Начать анализ">
                                 </Image>
@@ -65,7 +112,7 @@
                                  Background="Transparent"
                                  Height="25"
                                  VerticalAlignment="Center"
-                                 Margin="40,3,40,0"
+                                 Margin="40,-17,40,0"
                                  BorderThickness="0"
                                  Width="450"
                                  Opacity="0.85"
@@ -88,7 +135,7 @@
                                         <Button Width="120"
                                         Height="30"
                                         Opacity="0"/>
-                                        <Label Content="Поиск в Google"
+                                        <Label Content="Поиск в системе"
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"
                                    FontSize="14"

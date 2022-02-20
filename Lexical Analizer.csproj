@@ -103,5 +103,17 @@
   <ItemGroup>
     <Resource Include="Icons\Seacrhc.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\guap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\suai-main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\help.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,3 +13,4 @@ D:\CodeProds\Lexical Analizer\obj\Release\Lexical Analizer.csproj.GenerateResour
 D:\CodeProds\Lexical Analizer\obj\Release\Lexical Analizer.csproj.CoreCompileInputs.cache
 D:\CodeProds\Lexical Analizer\obj\Release\Lexical Analizer.exe
 D:\CodeProds\Lexical Analizer\obj\Release\Lexical Analizer.pdb
+D:\CodeProds\Lexical Analizer\obj\Release\Lexical Analizer.csproj.AssemblyReference.cache

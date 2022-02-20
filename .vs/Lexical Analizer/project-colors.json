@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "20f9ade8-4a35-43a3-a771-145c7f4531e9": {
+      "ProjectGuid": "20f9ade8-4a35-43a3-a771-145c7f4531e9",
+      "DisplayName": "Lexical Analizer",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
