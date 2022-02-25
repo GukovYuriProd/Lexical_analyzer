@@ -26,6 +26,9 @@ namespace Lexical_Analizer
         {
             InitializeComponent();
             HelpBorder.Width = 0;
+            //TEST_ZONE
+            //FileWindow WorkWithFile = new FileWindow(); 
+            //WorkWithFile.Show();
         }
 
         #region DOCS
@@ -174,7 +177,7 @@ namespace Lexical_Analizer
                     }
                 }
             }
-            
+
         }
 
         private void StateRouter(char _localSimbol, int _localState, string _localClassification) //логический маршрутизатор и форматор "слова" для вывода в строку
@@ -219,7 +222,7 @@ namespace Lexical_Analizer
             return _returnState;
         }
 
-        private void ClearSearch(object sender, MouseButtonEventArgs e)
+        private void ClearSearch(object sender, MouseButtonEventArgs e) //очиститель строки ввода информации
         {
             WorkArea.Children.Clear();
             SearchLine.Clear();
@@ -243,30 +246,30 @@ namespace Lexical_Analizer
         }
 
         #region BackMoves
-        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e) //метод для пермещения окна
         {
             if (e.LeftButton == MouseButtonState.Pressed) DragMove();
         }
 
-        private void CloseWindow(object sender, RoutedEventArgs e)
+        private void CloseWindow(object sender, RoutedEventArgs e) //метод для закрытия окна
         {
             this.Close();
         }
         #endregion
 
-        private void GoogleSearchPSEVDOLEFT(object sender, MouseButtonEventArgs e)
+        private void GoogleSearchPSEVDOLEFT(object sender, MouseButtonEventArgs e) //метод для левой кнопки на экране 
         {
             MessageBox.Show("Скажу по секрету, я не Гугл;)");
         }
 
-        private void GoogleSearchPSEVDORIGHT(object sender, MouseButtonEventArgs e)
+        private void GoogleSearchPSEVDORIGHT(object sender, MouseButtonEventArgs e) //метод для парво й кнопки на экране
         {
             ProcessStartInfo psiOpt = new ProcessStartInfo(@"cmd.exe", @"/C start https://www.youtube.com/watch?v=dQw4w9WgXcQ /all");
             Process procCommand = Process.Start(psiOpt);
 
         }
         private bool HelpTooTip = false;
-        private void HelpButton_Toogle(object sender, MouseButtonEventArgs e)
+        private void HelpButton_Toogle(object sender, MouseButtonEventArgs e) //метод для откртия\закрытия подсказки в верхнем правом углу
         {
             if (HelpTooTip)
             {
@@ -286,7 +289,8 @@ namespace Lexical_Analizer
                 tipopacity.To = 0;
                 tipopacity.Duration = TimeSpan.FromSeconds(0.5);
                 HelpBorder.BeginAnimation(Border.OpacityProperty, tipopacity);
-            } else
+            }
+            else
             {
                 HelpTooTip = true;
                 DoubleAnimation tipmaximize = new DoubleAnimation();
@@ -307,28 +311,38 @@ namespace Lexical_Analizer
             }
         }
         #region Work with file
-        private void FileEnter(object sender, DragEventArgs e)
+        private void FileEnter(object sender, DragEventArgs e) //событие при внесении файла в окно
         {
             FileEnterPool.Height = 200;
             CorrectionLayout.Height = 150; //250
             SearchLine.Height = 0;
+            FileEnteredTip.Opacity = 1;
+        }
+
+
+        private void FileLeave(object sender, DragEventArgs e) //собыие при вынесении файла из окна
+        {
+            FileEnterPool.Height = 40;
+            CorrectionLayout.Height = 230;
+            SearchLine.Height = 25;
+            FileEnteredTip.Opacity = 0;
+        }
+
+        private void FileEnterPool_Drop(object sender, DragEventArgs e) //событие при вложении файла в окно программы
+        {
+            FileEnterPool.Height = 40;
+            CorrectionLayout.Height = 230;
+            SearchLine.Height = 25;
+            FileEnteredTip.Opacity = 0;
+            SearchLine.Text = ((string[])e.Data.GetData(DataFormats.FileDrop))[0];
+            FileWindow WorkWithFile = new FileWindow(SearchLine.Text);
+            WorkWithFile.Show();
+            SearchLine.Focus();
         }
         #endregion
-
-        private void FileLeave(object sender, DragEventArgs e)
+        private void GoToHome(object sender, MouseButtonEventArgs e)
         {
-            FileEnterPool.Height = 40;
-            CorrectionLayout.Height = 230;
-            SearchLine.Height = 25;
-        }
-
-        private void FileEnterPool_Drop(object sender, DragEventArgs e)
-        {
-            FileEnterPool.Height = 40;
-            CorrectionLayout.Height = 230;
-            SearchLine.Height = 25;
-            SearchLine.Text = ((string[])e.Data.GetData(DataFormats.FileDrop))[0];
-            SearchLine.Focus();
+            SearchLine.Clear();
         }
     }
 }

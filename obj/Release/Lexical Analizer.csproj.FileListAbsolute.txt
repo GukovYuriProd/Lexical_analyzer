@@ -14,3 +14,5 @@ D:\CodeProds\Lexical Analizer\obj\Release\Lexical Analizer.csproj.CoreCompileInp
 D:\CodeProds\Lexical Analizer\obj\Release\Lexical Analizer.exe
 D:\CodeProds\Lexical Analizer\obj\Release\Lexical Analizer.pdb
 D:\CodeProds\Lexical Analizer\obj\Release\Lexical Analizer.csproj.AssemblyReference.cache
+D:\CodeProds\Lexical Analizer\obj\Release\FileWindow.g.cs
+D:\CodeProds\Lexical Analizer\obj\Release\FileWindow.baml

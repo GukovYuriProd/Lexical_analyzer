@@ -19,6 +19,12 @@
                 DragLeave="FileLeave"
                 Drop="FileEnterPool_Drop">
             <Grid>
+                <Image Width="17"
+                       Source="\Icons\home.png"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Top"
+                       Cursor="Hand"
+                       Margin="5"/>
                 <Grid VerticalAlignment="Top"
                       HorizontalAlignment="Right"
                       Margin="5">
@@ -86,8 +92,22 @@
                         CornerRadius="21"
                         Opacity="0.17"
                         Margin="0,5,0,25"
-                                        x:Name="FileEnterPool"
-                                        />
+                                        x:Name="FileEnterPool">
+                                    <Grid HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
+                                          x:Name="FileEnteredTip"
+                                          Opacity="0">
+                                        <StackPanel Orientation="Vertical">
+                                            <Image Width="80"
+                                                   Opacity="0.7"
+                                                   Source="\Icons\file.png"/>
+                                            <Label FontSize="17"
+                                                   Content="Поместите файл в эту область"
+                                                   HorizontalAlignment="Center"
+                                                   Margin="0,10,0,0"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
                                 <Image Width="17"
                            Height="35"
                            Source="\Icons\Trash.png"
