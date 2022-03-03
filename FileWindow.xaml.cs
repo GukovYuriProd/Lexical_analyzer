@@ -146,7 +146,6 @@ namespace Lexical_Analizer
                             newlineindatagrid.Children.Add(leftpad);
                             newlineindatagrid.Children.Add(rightpad);
                             fileVisualizator.Children.Add(newlineindatagrid);
-                            //label.Content = '"' + _word + '"' + " IS " + _wordClass;
                         }
                         switch (_state) //автомат состояний
                         {

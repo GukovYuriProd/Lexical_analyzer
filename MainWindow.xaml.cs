@@ -26,9 +26,6 @@ namespace Lexical_Analizer
         {
             InitializeComponent();
             HelpBorder.Width = 0;
-            //TEST_ZONE
-            //FileWindow WorkWithFile = new FileWindow(); 
-            //WorkWithFile.Show();
         }
 
         #region DOCS
